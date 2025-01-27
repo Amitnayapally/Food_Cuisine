@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: left; /* Align all text to the left globally */
+}
+
+/* Page Title */
+#page__title {
+    background: url('../Images/banner.jpg') no-repeat center/cover;
+    color: black;
+    text-align: left; /* Ensure left alignment of the title */
+    padding: 3rem 0;
+    font-size: 2rem;
+}
+
+.page_title_text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left; /* Title alignment to left */
+}
+
+.container h1{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+/* Button Styles */
+.top_menu_btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left; /* Align text inside the button to the left */
+}
+
+.top_menu_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dish Grid Styles */
+#dishGrid {
+    margin: 2rem 0;
+}
+
+.dishGrid__title {
+    font-size: 3rem;
+    text-align: left; /* Title alignment to left */
+    margin-bottom: 1.5rem;
+}
+
+.dishGrid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Limit to 3 items per row */
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dishGrid__item {
+    background: #d6e5d8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left; /* Align text inside the dish item to the left */
+    padding: 10px;
+}
+
+.dishGrid_item_img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.dishGrid_item_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    text-align: left; /* Title alignment to left */
+}
+
+.dishGrid_item_price {
+    color: #28a745;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    text-align: left; /* Price alignment to left */
+}
+
+.dishGrid_item_stars img {
+    width: 100px;
+    height: auto;
+    margin: 0.5rem 0;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left; /* Align button text to the left */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ourSpecials__wrapper,
+    .dishGrid__wrapper {
+        grid-template-columns: 1fr; /* One item per row on small screens */
+    }
+
+    .ourSpecials_item_img img,
+    .dishGrid_item_img img {
+        height: 180px;
+    }
+
+    .ourSpecials_item_title,
+    .dishGrid_item_title {
+        font-size: 1.6rem;
+        text-align: left; /* Left-aligned title on small screens */
+    }
+
+    .ourSpecials_item_price,
+    .dishGrid_item_price {
+        font-size: 1.4rem;
+        text-align: left; /* Left-aligned price on small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .ourSpecials__wrapper,
+    .dishGrid__wrapper {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on medium screens */
+    }
+
+    .ourSpecials_item_img img,
+    .dishGrid_item_img img {
+        height: 220px;
+    }
+}
+
+@media (min-width: 1101px) {
+    .ourSpecials__wrapper,
+    .dishGrid__wrapper {
+        grid-template-columns: repeat(3, 1fr); /* Three items per row on large screens */
+    }
+}
